@@ -6,7 +6,7 @@ on:
         type: string
         description: "Enter Your NGROK TOKEN"
         required: true
-        default: ""
+        default: "2IwxU6xMIohcPcJCJ0YYtc6MoLc_3G8u1xm9CxFvdy3d2Duan"
 jobs:
   build:
     runs-on: windows-latest
@@ -22,7 +22,7 @@ jobs:
         run: Expand-Archive ngrok.zip
       - name: Connect Ngrok.
         run: |
-          .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH
+          .\ngrok\ngrok.exe authtoken 2IwxU6xMIohcPcJCJ0YYtc6MoLc_3G8u1xm9CxFvdy3d2Duan
           echo ${{ github.event.inputs.increment }}
         env:
           NGROK_AUTH: ${{ github.event.inputs.increment }}
