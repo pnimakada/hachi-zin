@@ -5,7 +5,7 @@ on:
       increment:
         type: string
         description: "Enter Your NGROK TOKEN"
-        required: true
+        required: false
         default: ""
 jobs:
   build:
